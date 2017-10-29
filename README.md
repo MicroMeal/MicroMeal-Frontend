@@ -6,7 +6,7 @@ MicroMeal Frontend
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-green.svg)
 
 
-This is the frontend for MicroMeal written in ReactJS. MicroMeal is an app that helps people put together meal plans suitable for their dietary requirements.
+This is the frontend for MicroMeal written in ReactJS. MicroMeal is an app that helps people put together meal plans suitable for their dietary requirements. The backend can be found at [MicroMealServer](https://github.com/MicroMeal/MacroMealServer).
 
 ## Table of Contents
 - [Installation](#installation)
@@ -20,7 +20,7 @@ This is the frontend for MicroMeal written in ReactJS. MicroMeal is an app that 
 ### Prerequisites
 Before you get the code you will need to install the following dependencies
 
-- [NodeJS](https://github.com/Masterminds/glide), binary releases can be obtained from the [NodeJS Website](https://nodejs.org/en/download/)
+- [NodeJS](https://nodejs.org), binary releases can be obtained from the [NodeJS Website](https://nodejs.org/en/download/)
 
 
 ### Getting the Code
@@ -31,7 +31,7 @@ git clone git@github.com:MicroMeal/MicroMeal-Frontend.git MicroMeal
 cd MicroMeal
 ```
 
-Then install the dependencies using glide
+Then install the dependencies using npm
 ``` 
 npm install
 ```
