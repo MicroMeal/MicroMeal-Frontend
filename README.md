@@ -2,7 +2,7 @@ MicroMeal Frontend
 =======
 
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![GitHub issues](https://img.shields.io/github/issues/ospixel/platform.svg)](https://github.com/ospixel/platform/issues)
+[![GitHub issues](https://img.shields.io/github/issues/ospixel/platform.svg)](https://github.com/MicroMeal/MicroMeal-Frontend/issues)
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-green.svg)
 
 
