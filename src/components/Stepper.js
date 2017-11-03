@@ -7,6 +7,7 @@ import {
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
 import UserInformationCollector from './UserInformationCollector'
+import Paper from 'material-ui/Paper';
 
 /**
  * HorizontalLinearStepper switches between the components that
@@ -23,7 +24,7 @@ export default class HorizontalLinearStepper extends React.Component {
     const {stepIndex} = this.state;
     this.setState({
       stepIndex: stepIndex + 1,
-      finished: stepIndex >= 2,
+      finished: stepIndex >= 4,
     });
   };
 
@@ -37,11 +38,15 @@ export default class HorizontalLinearStepper extends React.Component {
   getStepContent(stepIndex) {
     switch (stepIndex) {
       case 0:
-        return <UserInformationCollector />;
+        return 'Welcome to the TDEE calculator';
       case 1:
-        return 'Your Activities';
+        return <UserInformationCollector />;
       case 2:
+        return 'Your Activities';
+      case 3:
         return 'Your Goal';
+      case 4:
+        return 'Your Results';
       default:
         return 'Something went wrong!';
     }
@@ -50,10 +55,22 @@ export default class HorizontalLinearStepper extends React.Component {
   render() {
     const {finished, stepIndex} = this.state;
     const contentStyle = {margin: '0 16px'};
+    const paperStyle = {
+      height: '100%',
+      width: '100%',
+      //margin: 10,
+      textAlign: 'center',
+      display: 'inline-block',
+    };
+
 
     return (
-      <div style={{width: '100%', maxWidth: 700, margin: 'auto'}}>
+      <Paper style={paperStyle} zDepth={2}>
+      <div style={{height: '400px', width: '800px', maxWidth: 700, margin: 'auto'}}>
         <Stepper activeStep={stepIndex}>
+          <Step>
+            <StepLabel>Welcome</StepLabel>
+          </Step>
           <Step>
             <StepLabel>Information</StepLabel>
           </Step>
@@ -62,6 +79,9 @@ export default class HorizontalLinearStepper extends React.Component {
           </Step>
           <Step>
             <StepLabel>Goals</StepLabel>
+          </Step>
+          <Step>
+            <StepLabel>Results</StepLabel>
           </Step>
         </Stepper>
         <div style={contentStyle}>
@@ -86,7 +106,7 @@ export default class HorizontalLinearStepper extends React.Component {
                   style={{marginRight: 12}}
                 />
                 <RaisedButton
-                  label={stepIndex === 2 ? 'Finish' : 'Next'}
+                  label={stepIndex === 4 ? 'Finish' : 'Next'}
                   primary={true}
                   onClick={this.handleNext}
                 />
@@ -95,6 +115,7 @@ export default class HorizontalLinearStepper extends React.Component {
           )}
         </div>
       </div>
+      </Paper>
     );
   }
 }

@@ -1,10 +1,13 @@
 import React from 'react';
 import AppBar from 'material-ui/AppBar';
+import TopToolbar from './TopToolbar'
 
 const TopMenubar = () => (
   <AppBar
+   style={{boxShadow: '0'}}
+   titleStyle={{fontWeight: '300'}}
     title="MicroMeal"
-    iconClassNameRight="muidocs-icon-navigation-expand-more"
+    iconElementRight={<TopToolbar />}
   />
 );
 

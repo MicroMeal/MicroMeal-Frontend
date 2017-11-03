@@ -10,31 +10,38 @@ import TextField from 'material-ui/TextField';
  */
 export default class UserInformationCollector extends React.Component{
 	state = {
-		
+		gender: null,
+		age: null,
+
 	};
 
-	handleChange = (event, index, value) => {
-		this.setState({value});
-		console.log("State: " + value)
-	} 
+	handleGenderChange = (event, index, value) => {
+		this.setState({gender: value});
+	}
+
+	handleAgeChange = (event, index, value) => {
+		this.setState({age: value});
+	}
 		
 	render(){
 		return(
 			<div>
 				<SelectField
+					name="gender"
 					style={{textAlign: 'left'}}
 	          		floatingLabelText="Gender"
-	          		value={this.state.value}
-	          		onChange={this.handleChange}
+	          		value={this.state.gender}
+	          		onChange={this.handleGenderChange}
 	          		>
-	          		<MenuItem value={1} primaryText="Male" />
+	          		<MenuItem name="gender" value={1} primaryText="Male" />
 	          		<MenuItem value={2} primaryText="Female" />
 	        	</SelectField>
 	        	<br />
 	        	
 	        	<TextField
       				hintText="Age"
-      				age={this.state.value}
+      				age={this.state.age}
+      				onChange={this.handleAgeChange}
     			/><br />
 
     			<TextField

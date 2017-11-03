@@ -3,9 +3,9 @@ import './App.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import TopMenubar from './components/TopMenubar'
-import BottomNavigationbar from './components/BottomNavigationbar'
-import HorizontalLinearStepper from './components/Stepper'
+import TopNavigation from './components/TopNavigation'
 
+//#32353C
 // Set the colour scheme for the application
 const muiTheme = getMuiTheme({
     palette: {
@@ -15,7 +15,7 @@ const muiTheme = getMuiTheme({
       accent1Color: '#607D8B',
       textColor: '#212121',
       secondaryTextColor: '#757575',
-  },
+  }
 })
 
 class App extends Component {
@@ -24,8 +24,8 @@ class App extends Component {
       <MuiThemeProvider  muiTheme={muiTheme}>
         <div className="App">
           <TopMenubar />
-          <HorizontalLinearStepper />
-          <BottomNavigationbar />
+          <TopNavigation />
+          
         </div>
       </MuiThemeProvider>
     );
